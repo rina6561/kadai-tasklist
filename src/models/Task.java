@@ -10,7 +10,6 @@ import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
-
 @Entity
 @NamedQueries({
     @NamedQuery(
@@ -18,7 +17,6 @@ import javax.persistence.Table;
         query = "SELECT t FROM Task AS t ORDER BY t.id DESC"
     )
 })
-
 @Table(name = "tasks")
 public class Task {
     @Id
@@ -37,7 +35,8 @@ public class Task {
 
     public Integer getId() {
         return id;
-}
+    }
+
     public void setId(Integer id) {
         this.id = id;
     }
